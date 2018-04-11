@@ -12,7 +12,6 @@
     step4：確認目標網址的編碼方式再encoding此編碼，語法為：res.encoding="big5</br>
     step4：最後將response的結果印出來，語法為：print(res.test)</br>
 程式碼如下</br>
-</br>
 ```python
 #request 漫畫名稱，respon
 import requests as r
