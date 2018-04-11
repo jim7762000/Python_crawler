@@ -11,6 +11,7 @@
     step3：準備好url & headers即可正式requests url，拿回res(此為一物件)，語法為： res=r.get(url,headers=head)</br>
     step4：確認目標網址的編碼方式再encoding此編碼，語法為：res.encoding="big5</br>
     step4：最後將response的結果印出來，語法為：print(res.test)</br>
+
 程式碼如下</br>
 ```python
 #request 漫畫名稱，respon
