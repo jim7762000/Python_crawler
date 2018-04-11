@@ -6,7 +6,7 @@
 # 1.requests
 主要分成二種方法(get & post)
 1. get：
-    step1：宣告一個url(目標網址) url="www.xxx.com.TW"
+    step1：宣告一個url(目標網址) url="www.xxx.com.TW"</br>
     step2：宣告一個head={"Connection":"keep-alive"}(此為一個dic)，為了讓程式像是一般的瀏覽器
     step3：準備好url & headers即可正式requests url，拿回res(此為一物件)，語法為： res=r.get(url,headers=head)
     step4：確認目標網址的編碼方式
