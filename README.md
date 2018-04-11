@@ -1,8 +1,30 @@
-# Python_crawler
-使用Python套件
+# Python_crawler：使用三種Python套件
 + requests
 + beautifulsoup4
-++ re(正規表式法)
++ re(正規表式法)
 
-# 123
-## 456
+# 1.requests
+主要分成二種方法(get & post)
+## get
+程式碼如下
+```python
+#request 漫畫名稱，respon
+import requests as r
+url ="http://www.cartoonmad.com/comic/1221.html"
+head={"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+    "Accept-Encoding":"gzip, deflate",
+    "Accept-Language":"zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Cache-Control":"max-age=0",
+    "Connection":"keep-alive",
+    "Cookie":"ASPSESSIONIDCSRQBDAR=IIHNKLGBLAANGAGLGLAEMNFJ; __utma=42881207.392990975.1522250582.1522250582.1522250582.1; __utmc=42881207; __utmz=42881207.1522250582.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utmt=1; chname=%7C%B7s%A5%7C%C5X%A4p%A4l%7C%B6i%C0%BB%AA%BA%A5%A8%A4H; chid=%7C07609%7C01221; __utmb=42881207.10.10.1522250582",
+    "Host":"www.cartoonmad.com",
+    "Referer":"http://www.cartoonmad.com/",
+    "Upgrade-Insecure-Requests":"1",
+    "User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1"}
+
+res=r.get(url,headers=head)
+res.encoding="big5"
+page=res.text
+print(res.text)
+print(res.status_code)
+```
