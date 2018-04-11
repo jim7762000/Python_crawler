@@ -35,8 +35,11 @@ print(res.status_code)
 ```
 ## 2.beautifulsoup
 目的：截取html檔中想要的內容
-
-程式碼如下
++ 使用方法：</br>
+    step1：先掃描需要的html檔案，語法為：soup = BeautifulSoup(page, 'lxml') 其中page即為html的擋案</br>
+    step2：用chrome觀察想要截取內容的在哪一個tag中，本範例為找出每一話名稱，與每一話的url</br>
+    step3：觀察結果為每一話名稱&url皆在 id為info中的td a裡面，且名稱直接是text，url則是其中的屬性href</br>
+    step4：最後再塞進list中為了之後方便使用</br>
 ```python
 from bs4 import BeautifulSoup
 chapter_html=[]
