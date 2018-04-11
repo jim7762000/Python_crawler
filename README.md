@@ -33,10 +33,22 @@ page=res.text
 print(res.text)
 print(res.status_code)
 ```
-1. post：</br>
+2. post：</br>
     step1：宣告一個url(目標網址) url="www.xxx.com.TW"</br>
     step2：宣告一個head={"Connection":"keep-alive"}(此為一個dic)，為了讓程式像是一般的瀏覽器</br>
     step3：準備好url & headers即可正式requests url，拿回res(此為一物件)，語法為： res=r.get(url,headers=head)</br>
     step4：確認目標網址的編碼方式再encoding此編碼，語法為：res.encoding="big5</br>
     step4：最後將response的結果印出來，語法為：print(res.test)</br>
-程式碼如下</br>
+程式碼如下
+```python
+from bs4 import BeautifulSoup
+chapter_html=[]
+soup = BeautifulSoup(page, 'lxml') # html5lib
+for index in soup.select('#info td a'):
+    chapter=index.text
+    chapter_url="http://www.cartoonmad.com"+index["href"]
+    #print(index.text)
+    #print(index["href"])
+    chapter_html.append([chapter,chapter_url])
+chapter_html
+```
