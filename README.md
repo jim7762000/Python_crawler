@@ -1,11 +1,11 @@
 # Python_crawler：使用三種Python套件
 + requests
-+ beautifulsoup4
++ beautifulsoup4(抓去html中的tag)
 + re(正規表式法)
 
 # 1.requests
 主要分成二種方法(get & post)
-## get
+1. get
 程式碼如下
 ```python
 #request 漫畫名稱，respon
